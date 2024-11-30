@@ -1,0 +1,32 @@
+import 'package:flutter/material.dart';
+import '../core/Widgets.dart';
+
+class Cart extends StatelessWidget {
+  const Cart({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: InkWell(
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+            child: CustomIcons.ArrowIcon),
+        title: Text("Cart"),
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          // BackButton()
+          Text("Remove All",style: TextStyle(
+            fontSize: 18,
+          )),
+          // ListView.separated(
+          //
+          // )
+        ],
+      ),
+    );
+  }
+}
